@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplos de Tabelas</title>
+</head>
+<body>
+    <header>
+        <a href="index.htm" style="font-size: smaller;">Voltar</a>
+    </header>
+    <br><br><br>
+
+    <h1>Exemplos de Tabelas</h1>
+
+    <main>
+        <h2>Tabelas no <code>HTML</code></h2>
+
+        <section id="tabela1">
+            <h3>Tabela de Alunos</h3>
+
+            <table border="2">
+                <thead> <!--indica o cabeçalho da tabela. 'tr' delimita a linha, tanto aqui quanto nos dados reais da tabela e 'th' delimita os elementos daquela linha-->
+                    <tr>
+                        <th>Nome</th>
+                        <th>E-mail</th>
+                        <th>Matrícula</th>
+                    </tr>
+                </thead>
+                <tbody> <!--tr cria mais uma linha, definida por 'td'(cada célula da tabela é um td), no mesmo número de componentes que o 'th'-->
+                    <tr>
+                        <td>Gabriela Mara</td>
+                        <td>gabriela@html.com</td>
+                        <td>12345</td>
+                    </tr>
+                    <tr>
+                        <td>Isabela Cristina</td>
+                        <td>isabela@html.com</td>
+                        <td>54321</td>
+                    </tr>
+                    <tr>
+                        <td>Altamir Alves</td>
+                        <td>altamir@html.com</td>
+                        <td>32154</td>
+                    </tr>
+                    <tr>
+                        <td>Maria de Fátima</td>
+                        <td>fatima@html.com</td>
+                        <td>45123</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="tabela2">
+            <h3>Tabela de Finanças</h3>
+
+            <table border="2">
+                <thead>
+                    <tr>
+                        <th>Data</th>
+                        <th>Tipo</th>
+                        <th>Descrição</object></th>
+                        <th>Valor</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr> <!--criei uma linha (tr) com 4 informaçõoes (td)-->
+                        <td rowspan="2">08/11/2023</td> <!-- 'rowspan' empurra a linha debaixo, então é necessário não inserir o mesmo dado na outra linha-->
+                        <td colspan="2">Despesa</td> <!--'colspan' liga duas colunas dentro da mesma linha, portanto é necessário retirar a outra coluna e deixar somente a com o atributo-->
+                        <!-- <td>Carteirinha de Estudante</td> -->
+                        <td>R$ 52,00</td>
+                    </tr>
+                    <tr>
+                        <td>Despesa</td>
+                        <td>Sacola do Repassa</td>
+                        <td>R$ 49,00</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+</body>
+</html>

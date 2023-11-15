@@ -1,0 +1,23 @@
+.boxes {
+    height: calc(100vh);
+    position: relative;
+
+    display: grid;/*aguenta muito do que o flexbox permite*/
+    justify-content: flex-start;
+    /*grid-gap está desocntinuado, ultimamente é mais gap, até porque pode ser usado no flex (mas pode colocar column-gap e row-gap também*/gap: 2rem 2rem; /*espaçar elementos, row primeiro e column depois*/
+
+    grid-template-columns: 3fr repeat(3, 1fr); /*significa o mesmo de escrever 1fr 1fr 1fr.*/
+    
+
+    /* grid-template-columns: 200px 3fr;
+    grid-template-rows: minmax(150px, 10fr) 2fr; delimita a quantidiade de unidades flexíveis que a linha pode usar, e não necessariamente quantas linhas tem */
+}
+
+.box {
+    background-color: #63d656;
+    border: 10px solid #ef5555;
+    color: white;
+    display: inline-block;
+    font-size: 4rem;
+    padding: 1rem;
+}

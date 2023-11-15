@@ -1,0 +1,78 @@
+    body {
+        font-family: 'Courier Prime', monospace;
+        font-size: small;
+    }
+    /* usar o FIGMA para formatação em site, pois ele já fornece as possibilidades estilísticas e as características do seu design */
+    :root {
+        font-size: 62.5%;
+    }
+
+    a {
+        font-size: 2.4rem;
+    }
+
+    a:visited {
+        color:blueviolet;
+    }
+
+    a:hover { 
+        color: coral;
+    }
+    /* o hover tem que vir depois do visited e do normal, se não corre o risco de sobrescrever */
+
+    .regular {
+        list-style-type:square;
+        padding-left: 2.4rem;
+    }
+
+    .regular2 {
+        list-style-type:armenian;
+        padding-left: 2.4rem;
+    }
+
+    .genterm {
+    color:crimson;
+    border: 1px solid chocolate;
+    }
+
+    .term {
+    color:cadetblue;
+    border: 1px solid black;
+    }
+
+    .closing {
+    color:tomato;
+    }
+
+    .decor {
+    color:blue;
+    border: 1px solid red;
+    }
+
+    .example {
+    color:darkmagenta;
+    }
+
+    .example2 {
+    color:darkred;
+    }
+
+    .extras {
+    color:greenyellow;
+    border: 1px solid black;
+    }
+
+    .table {
+    color:deeppink;
+    border: 1px solid black;
+    }
+
+    .form {
+    color:mediumorchid;
+    border: 1px solid black;
+    }
+
+    dt {
+    color:black;
+    background-color:lightpink;
+    }

@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML Notes</title>
+  <!-- id tem que ser único, não pode ser repetido em várias tags. já o 'class' pode ser repetido e funciona para estilizar no CSS (todos em uma mesma classe)-->
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Nothing+You+Could+Do&display=swap"
+    rel="stylesheet">
+
+</head>
+
+<body>
+  <header>
+    <!-- <figure>
+       <img src="images/html-logo.png" alt="HTML Logo" float="left" style="width:140px; height:140px;">
+      </figure> -->
+    <h1 id="começo" style="background-color:tomato; font-family: 'Nothing You Could Do', cursive;"><abbr
+        title="Hypertext Markup Language">HTML</abbr> Elements</h1>
+    <nav style="display: flex;">
+      <!-- display: flex, no CSS, ordena os elementos um ao lado do outro -->
+      <a href="index.htm">
+        <img src="images/html-logo.png" alt="Logo do HTML" width="60">
+        <ul style="list-style-type: none; display: flex;">
+          <li>
+            <a href="#termsI">Semantics</a>
+          </li>
+          <pre>      </pre>
+          <li>
+            <a href="#termsII">Basics</a>
+          </li>
+          <pre>      </pre>
+          <li>
+            <a href="#termsIII">Text Decoration</a>
+          </li>
+          <pre>      </pre>
+          <li>
+            <a href="#termsIV">Extras</a>
+          </li>
+          <pre>      </pre>
+          <li>
+            <a href="#termsV">Tables</a>
+          </li>
+          <pre>      </pre>
+          <li>
+            <a href="#termsVI">Forms</a>
+          </li>
+          <pre>      </pre>
+          <li>
+            <a href="#cores">Colors</a>
+          </li>
+          <pre>      </pre>
+          <li>
+            <a href="#input">Input's Type</a>
+          </li>
+          <pre>      </pre>
+          <li>
+            <a href="primeiro.html">New Notes</a>
+          </li>
+        </ul>
+      </a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="definição1">
+      <div id="termsI">
+        <h2>Semantics</h2>
+        <ul class="regular">
+          <li><span class="genterm"><code>!DOCTYPE html</code></span> signalizes the document is HTML 5.</li>
+          <li><span class="genterm"><code>html</code></span> signalizes the begin of the html code in a page.</li>
+          <dl>
+            <dt><code>lang</code></dt>
+            <dd>implies the language being used in the page, mostly in the text inside of "body" (="en" or "en-US",
+              "pt-br").</dd>
+          </dl>
+          <li><span class="genterm"><code>head</code></span> signalizes the head element of "html", where all elements
+            that compose the page are situated, but <em>none of them are actually page elements</em>, they <em>only
+              modify or explain other page elements</em>.</li>
+          <li><span class="genterm"><code>body</code></span> signalizes the body element, where all true elements of a
+            page are situated.</li>
+          <dl>
+            <dt><code>id</code></dt>
+            <dd> adds an identifiable attribute to element, giving it a true id. "id"s can't be used more than one time
+              and are identified in CSS by "#".</dd>
+            <dt><code>class</code></dt>
+            <dd> adds an identifiable attribute to element, giving it a true class. "class" can be used more than one
+              time, can house more than one class (separated by spaces {<strong>class names are one-word</strong>}) and
+              are identified in CSS by ".".</dd>
+            <dt><code>title</code></dt>
+            <dd>tooltip for html readers and users.</dd>
+          </dl>
+          <li><span class="genterm"><code>nav</code></span> signifies the navigation part of the page, where elements
+            such as "a" can be used to link to other pages inside the same folder/site.</li>
+          <li><span class="genterm"><code>footer</code></span> limits the footer part of the page, serving a purpose of
+            a diviser.</li>
+          <li><span class="genterm"><code>header</code></span> indicates the information that headline the document,
+            such as logos, navigation, and short descriptions (cabeçalho).</li>
+          <li><span class="genterm"><code>div</code></span> is an <strong>organizer</strong> and serves the purpose of
+            grouping parts of the page's code in order to name, apply styles or add entire attributes to it, while
+            offering a line break from the other tags and contents on the page (não-semântico).</li>
+          <li><span class="genterm"><code>span</code></span> is an <strong>emphasizer</strong> and serves the purpose of
+            separating a piece of writing for styling or coding purposes. There is no line break using
+            <code>span</code>.</li>
+          <li><span class="genterm"><code>section</code></span> is an <strong>organizer</strong> and serves the purpose
+            of grouping parts of the page's code in order to name, apply styles or add entire attributes to it.</li>
+          <li><span class="genterm"><code>title</code></span> is used inside of "head" to title a page.<br>
+            the title used is what shows up naming a tab.</li>
+          <li><span class="genterm"><code>!-- --</code></span> is a <strong>commenter</strong> and everything disposed
+            inside is not seen inside the page, available only for the programmer.</li>
+          <li><span class="genterm"><code>style</code></span> is used inside of "head" to indicate the <abbr
+              title="Cascading Style Sheets">CSS</abbr> styling to be applied to specific elements or parts of the
+            entire code.<br>
+            normally more general, which allows more general styling to be done, such as to entire classes, ids or
+            elements.</li>
+          <li><span class="genterm"><code>article</code></span> is used for small independent texts inside of a page,
+            with generally related content, creating 'little pages'.</li>
+          <li><span class="genterm"><code>aside</code></span> creates space for elements indirectly related to a page's
+            contents (e.g. ad space).</li>
+          <li><span class="term"><code>figure</code></span> makes space for a picture INSIDE the code.</li>
+          <dl>
+            <dt><code>figcaption</code></dt>
+            <dd>inside of <code>figure</code>, creates a description for the image, a literal caption.</dd>
+          </dl>
+        </ul>
+        <hr>
+      </div>
+    </section>
+
+
+    <section id="definição2">
+      <div id="termsII">
+        <h2>Basics</h2>
+        <ul class="regular">
+          <li><span class="term"><code><q>h#</q></code></span> creates a heading.<br>numbers from <strong>1 to
+              6</strong> determine the size of the heading.</li>
+          <dl>
+            <dt><code>style</code></dt>
+            <dd> used to imply specific CSS alterations to a text. <em>does not</em> apply for the all
+              text/class/element in a document.</dd>
+            <ul><span style="text-decoration:underline;">useful CSS:</span>
+              <li><code>background-color</code> - defines the color of text background (entire line gets colored).</li>
+              <li><a href="#colortypes"><button><code>color</code></button></a> - defines a color for the text itself.
+              </li>
+              <li><code>width</code> - defines the width (in pixels) of the element (for tables, iframes, videos,
+                images).</li>
+              <li><code>height</code> - defines the height (in pixels) of the element (for tables, iframes, videos,
+                images).</li>
+              <li><a href="https://www.w3schools.com/css/css_font.asp"
+                  target="_blank"><button><code>font-family</code></button></a> - defines the font of the text
+                (customisable).</li>
+              <li><code>font-size</code> - changes size fo the font</li>
+              <li><code>border</code> - composed of the elements = 1px (size, girth of the border) solid (state of
+                border) black (color of border); if it's not written, the default is a borderless text.</li>
+              <li><code>border-spacing</code> - makes the borders in a table thicker, but still empty inside (filled
+                with white).</li>
+              <li><code>margin</code> - affects the space outside the border.</li>
+              <li><code>text-align</code> - defines the text alignment inside table or general space.</li>
+              <li><code>padding</code> - affects space between table border and the data inside.</li>
+            </ul>
+          </dl>
+          <li><span class="term"><code>p</code></span> determines a paragraph, same size unless pre-determined by CSS.
+          </li>
+          <li><span class="term"><code>a</code></span> determines a hyperlink, and the content inside the element tags
+            is what will be clickable.</li>
+          <dl>
+            <dt><code>href</code></dt>
+            <dd> attribute that houses the necessary link for the hyperlink. can use an URL, a relative link (to another
+              page inside the same folder {default.html} or to a # or .)or "mailto: email" (to send an e-mail).</dd>
+            <dt><code>target</code></dt>
+            <dd> determines exactly how this link will be opened. ='_self'(default)/'_blank'(new tab)/'_parent'(in a
+              parent frame)/'_top'(in a whole new body of window).</dd>
+          </dl>
+          <li><span class="term"><code>ul</code></span> creates an unordered list, for simple lists, truly without
+            order.</li>
+          <dl>
+            <dt><code>style='list-style-type'</code></dt>
+            <dd> specifies which type of icon should show up before the items in the list. (disc {default}; circle;
+              square; none).</dd>
+            <dt><code>style='float: left'</code>
+            <dt>
+            <dd> makes a horizontal list.</dd>
+          </dl>
+          <li><span class="term"><code>ol</code></span> creates an ordered list, with an specific order to be followed.
+          </li>
+          <dl>
+            <dt><code>type</code></dt>
+            <dd> specifies the type of numeration to be used (1; A; a; I; i)</dd>
+            <dt><code>start</code></dt>
+            <dd> indicates when the list should start, if not by the first term in the chosed type. (ol start="50")</dd>
+          </dl>
+          <li><span class="term"><code>li</code></span> determines the listed element inside "ol" and "ul" and it's
+            <em>the only possible element</em> nested inside both.</li>
+          <li><span class="term"><code>dl</code></span> creates a description list, where all items can have a short
+            descriptiona attached to them.</li>
+          <li><span class="term"><code>dt</code></span> is the term described in "dl".</li>
+          <li><span class="term"><code>dd</code></span> is the description data, as in the following item to "dt".</li>
+          <li><span class="term"><code>img</code></span> is the image element, where one can add the URL or location fo
+            an image, and also an alternate script to situate the image for website readers.<span
+              class="closing">(self-closing)</span></li>
+          <dl>
+            <dt><code>src</code></dt>
+            <dd> source fo the picture (URL).</dd>
+            <dt><code>alt</code></dt>
+            <dd> description for assistive tech.</dd>
+            <dt><code>width/height</code></dt>
+            <dd> indicates width and height of the image; can be both separate attributes or CSS styles.</dd>
+            <dt><code>float</code></dt>
+            <dd> indicates if the image is to float right or left of text.</dd>
+            <dt><code>usemap</code></dt>
+            <dd> indicates the use of an image map in the image, and the content of the attribute is the name of the
+              map.</dd>
+          </dl>
+          <!-- <li><span class="term">"map"</span> indicates the creation of an image map (areas in a picture that can link somewhere else).</li>
+ <dl>
+   <dt>"name"</dt>
+     <dd> name to be used when linking map to image.</dd>
+   <dt>attribute "area"</dt>
+      <dd> specifies the areas of the image that will be clickable</dd>
+  <br>
+    <ul>
+     <li>"shape"</li>
+       <dd> name to be used when linking map to image.</dd>
+     <li>"coords"</li>
+       <dd> specifies the areas of the image that will be clickable</dd>
+     <li>"alt"</li>
+       <dd> specifies the areas of the image that will be clickable</dd>
+     <li>"alt"</li>
+       <dd> specifies the areas of the image that will be clickable</dd>
+   </ul>
+ </dl> -->
+          <li><span class="term"><code>video</code></span> is the video element, where one can specify the URL/location
+            fo a video, width, height and specify the need for default controls.</li>
+          <dl>
+            <dt><code>src</code></dt>
+            <dd>the source of the video (URL).</dd>
+            <dt><code>width</code></dt>
+            <dd>indicates width of video window.</dd>
+            <dt><code>height</code></dt>
+            <dd>indicates height of video window.</dd>
+            <dt><code>controls</code></dt>
+            <dd>instructs browser to insert basic video controls into the video</dd>
+            <dt>add Video Not Supported between opening and closing elements; text will show when video won't
+              open/browser won't work.</dt>
+          </dl>
+          <li><span class="term"><code>br</code></span> is a line break, and what comes after is written in the line
+            directly under the previous text.<span class="closing">(self-closing)</span></li>
+          <li><span class="term"><code>hr</code></span> is a horizontal rule, and, not only does it break text, but also
+            draws a line between spaces.<span class="closing">(self-closing)</span></li>
+        </ul>
+        <hr>
+      </div>
+    </section>
+
+
+    <section id="definição3">
+      <div id="termsIII">
+        <h2>Text Decoration</h2>
+        <ul class="regular2">
+          <li><span class="decor"><code>em/i</code></span> is used for emphasizing a part of the text.<br>
+            "em" is generally used for a more emphasis and "i" is just for design purposes.<br>
+            (<span class="example"><em>I am a very pretty human being.</em></span> <span class="example2"><i>And I am
+                also smart, funny, likeable and capable of anyhting.</i></span>)</li>
+          <li><span class="decor"><code>strong/b</code></span> is used for highlighting a content in bold.<br>
+            "b" is literally the design choice of bold and "strong" comes with a stronger thought of highlight.<br>
+            (<span class="example"><strong>I am a very pretty human being.</strong></span> <span class="example2"><b>And
+                I am also smart, funny, likeable and capable of anyhting.</b></span>)</li>
+          <li><span class="decor"><code>pre</code></span> implies everything inside this element will maintain the same
+            aesthetic, spacing and formatting as written in code.<br>
+            <span class="example">
+              <pre>(I am a very 
+             pretty human being.)</pre>
+            </span>
+          </li>
+          <li><span class="decor"><code>q</code></span> is used to apply quotes ("") to a specific word.<br>
+            (<span class="example"><q>I am a very pretty human being.</q></span>)</li>
+          <li><span class="decor"><code>blockquote</code></span> is used to utilize cited quotations and format it
+            immediately, without other orders.</li>
+          <li><span class="decor"><code>mark</code></span> is used to literally highlight a word (background-color
+            change), normally in bright yellow.<br>
+            (<span class="example"><mark>I am a very pretty human being.</mark></span>)</li>
+          <li><span class="decor"><code>small</code></span> is used to apply a smalleer font in the text.<br>
+            (<span class="example"><small>I am a very pretty human being.</small></span>)</li>
+          <li><span class="decor"><code>sub</code></span> is used to subscript the text.<br>
+            (<span class="example"><sub>I am a very pretty human being.</sub></span>)</li>
+          <li><span class="decor"><code>sup</code></span> is used to superscript the text.<br>
+            (<span class="example"><sup>I am a very pretty human being.</sup></span>)</li>
+          <li><span class="decor"><code>del</code></span> is used to create a crossing on top of a text, as if deleting
+            the written words.<br>
+            (<span class="example"><del>I am a very pretty human being.</del></span>)</li>
+          <li><span class="decor"><code>ins</code></span> is used to create a line under the text, as if highlighting
+            it.<br>
+            (<span class="example"><ins>I am a very pretty human being.</ins></span>)</li>
+          <li><span class="decor"><code>bdo</code></span> is used to specify a bi-directional override, changing the
+            orientation of the text. (uses attribute "dir" and specifications "rtl" or "ltr")<br>
+            (<span class="example"><bdo dir="rtl">I am a very pretty human being.</bdo></span> <span
+              class="example2"><bdo dir="ltr">And I am also smart, funny, likeable and capable of
+                anyhting.</bdo></span>)</li>
+        </ul>
+        <h4>Representação (cheque o código)</h4>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In reiciendis quos accusantium deleniti suscipit,
+          laborum ipsa consectetur, eos facilis esse ducimus? Doloribus eos nisi, possimus nam exercitationem officia
+          laudantium quod.</p>
+        <p><b>Lorem</b>, <strong>ipsum</strong> <i>dolor</i> <em>sit</em>
+        <pre>conse
+               ctet
+               ur</pre> <q>adipisicing</q>
+        <blockquote>Enim minima</blockquote> <mark>ducimus</mark> <small>ullam</small> <sub>rerum</sub> <sup>nobis
+          voluptatum</sup> <del>aliquid</del> <u>illum</u>, <s>sapiente</s> <bdo dir="rtl">sed id beatae nisi
+          dolorem</bdo>, reprehenderit vitae? In beatae dolorum expedita officiis.</p>
+        <hr>
+      </div>
+    </section>
+
+
+    <section id="definição4">
+      <div id="termsIV">
+        <h2>Extras</h2>
+        <ul class="regular2">
+          <li><span class="extras"><code>button</code></span> .<br></li>
+          <li><span class="extras"><code>dfn</code></span>.</li>
+          <li><span class="extras"><code>time</code></span>.<br></li>
+          <li><span class="extras">"iframe"</span> is used to apply an iframe inside the page; an iframe is a visual
+            space inside of a webpage where another webpage can be opened.<br></li>
+          <dl>
+            <dt>"src"</dt>
+            <dd> indicates what website should be opne inside the iframe.</dd>
+            <dt>"name"</dt>
+            <dd> is the title of the iframe; important for step 5 and also for reading the page.</dd>
+            <dt>"width/height"</dt>
+            <dd> indicates width and height of iframe window. (ol start="50")</dd>
+            <dt>"style='width/height'; 'border' ('none' or specified)"</dt>
+            <dd> indicates the CSS to be applied to the iframe.</dd>
+          </dl>
+        </ul>
+        <hr>
+      </div>
+    </section>
+
+    <section id="definição5">
+      <div id="termsV">
+        <h2>Tables</h2>
+        <ul class="regular2">
+          <li><span class="table">"caption"</span> is used to apply a caption or title to the entire table.<br></li>
+          <li><span class="table">"tr"</span> defines the code for each table row, so is replayed multiple times, as
+            many times as there are rows in a table.</li>
+          <li><span class="table">"th"</span> is used to caption table headers, normally within the first table row,
+            defining to the code what is heading and what is data.<br></li>
+          <li><span class="table">"td"</span> is used to caption the data in the table.<br></li>
+          <dl>
+            <dt>"rowspan"</dt>
+            <dd> indicates the phenomena where one data spans for multiple rows.</dd>
+            <dt>"colspan"</dt>
+            <dd> indicates the phenomena where one data spans for multiple columns.</dd>
+          </dl>
+          <li><span class="table">"thead"</span> is used to specify the content inside the head of the table.<br></li>
+          <li><span class="table">"tbody"</span> is used to specify the content inside the body of the table.<br></li>
+          <li><span class="table">"tfoot"</span> is used to specify the content inside the foot of the table.<br></li>
+        </ul>
+        <a href="tabelas.html">Exemplos de Tabelas em código</a>
+        <hr>
+      </div>
+    </section>
+
+
+    <section id="definição6">
+      <div id="termsVI">
+        <h2>Forms</h2>
+        <ul class="regular2">
+          <li><span class="form">"form"</span> instructs browser to display/configure info next as a form and where/how
+            to submit it.<br></li>
+          <dl>
+            <dt>"action"</dt>
+            <dd> where the info goes (back-end kind of programming/not easily definible in HTML design).</dd>
+            <dt>"method"</dt>
+            <dd> what HTTP request to make, using <abbr title="Hypertext Transfer Protocol">HTTP</abbr> verbs (POST,
+              GET, PUT, DELETE).</dd>
+            <dt>"autocomplete"</dt>
+            <dd> tells browser to allow autocomplete answers based on user's previously typed info.</dd>
+            <dt>"novalidate"</dt>
+            <dd> tells the browser the form should not be validated.</dd>
+            <dt>can also include "h" and "p" to define and talk about the form itself <b>AFTER MAIN TAG</b>.</dt>
+          </dl>
+          <li><span class="form">"section"</span> groups data inside the form into separate inputs.</li>
+          <li><span class="form">"fieldset"</span> groups data inside the form into small separate blocks (design
+            choice).</li>
+          <li><span class="form">"legend"</span> is used after "fieldset" to name the group separated (design
+            choice).<br></li>
+          <li><span class="form">"input"</span> is used to define the form components by type and show how/where the
+            info will be inserted.<br></li>
+          <dl>
+            <dt>"id"</dt>
+            <dd> used to relate to "label"'s <ins>for</ins>.</dd>
+            <dt>"name"</dt>
+            <dd> indicates and identifies the info when sent (sends to actions as name=value).</dd>
+            <dt>"value"</dt>
+            <dd> pre-isnerted info in the field + sendable info.</dd>
+            <dt>"placeholder"</dt>
+            <dd> pre-inserted transparent info, the ind when you touch the form it disappears.</dd>
+            <dt>"pattern"</dt>
+            <dd> describes?helps in what to type (appears when one hovers the mouse).</dd>
+            <dt>"required"</dt>
+            <dd> indicates the phenomena where one data spans for multiple rows.</dd>
+            <dt>"checked"</dt>
+            <dt>"disabled"</dt>
+            <dd> indicates to the browser that the input is disabled.</dd>
+            <dt><a href="#inputtypes"><button>"type"</button></a></dt>
+            <dd> indicates what type of field to render and what kind of data it will accept.</dd>
+          </dl>
+          <li><span class="form">"label"</span> says what input is for, directly in the browser, like a header.<br></li>
+          <dl>
+            <dt>"for"</dt>
+            <dd> links the label to an input by using the same term as "id"</dd>
+          </dl>
+          <li><span class="form">"select"</span> for a dropdown list ("input" is not used).<br></li>
+          <dl>
+            <dt>"id"</dt>
+            <dd> used to relate to "label"'s <ins>for</ins>.</dd>
+            <dt>"name"</dt>
+            <dd> indicates and identifies the info when sent (sends to actions as name=value).</dd>
+            <dt>"size"</dt>
+            <dd> defines the number of options.</dd>
+            <dt>"multiple"</dt>
+            <dd> indicates there are multiple options available to choose.</dd>
+          </dl>
+          <li><span class="form">"option"</span> is what defines each option in the dropdown list.<br></li>
+          <dl>
+            <dt>"value"</dt>
+            <dd> is the value of the option, the info to be sent.</dd>
+            <dt>"selected"</dt>
+            <dd> specifies which option should show as default.</dd>
+          </dl>
+          <li><span class="form">"textarea"</span> is used for more writing space, in comparison to "input"'s
+            "type="text"".<br></li>
+          <dl>
+            <dt>"id"</dt>
+            <dd> used to relate to "label"'s <ins>for</ins>.</dd>
+            <dt>"name"</dt>
+            <dd> indicates and identifies the info when sent (sends to actions as name=value).</dd>
+            <dt>"rols" and "cols"</dt>
+            <dd> dimensions for writing space.</dd>
+          </dl>
+          <li><span class="form">"button"</span> creates a clickable button.<br></li>
+          <dl>
+            <dt>"type"</dt>
+            <dd> normally equals <b>button</b>.</dd>
+            <dt>"onclick"</dt>
+            <dd> specifies what happens when button is clicked ("=alert('Hello!')") .</dd>
+          </dl>
+        </ul>
+      </div>
+
+      <div id="input">
+        <h4 id="inputtypes">Types of inputs:</h4>
+        <ol>
+          <li>"text" renders a text field.</li>
+          <dt>
+          <dd><mark>list</mark> + "datalist" (<mark>id</mark>) and "option" = typable list, where one can find their
+            option within a list by typing.</dd>
+          </dt>
+          <br>
+          <li>"number" creates a space for numeric answers.</li>
+          <dt>
+          <dd><mark>step</mark> defines the frequency in which the number grows, how much option will grow from
+            n<sub>1</sub> to n<sub>2</sub>.</dd>
+          </dt>
+          <br>
+          <li>"checkbox" creates a checkbox for selection.</li>
+          <dt>
+          <dd><mark>value</mark> defines the info that will be sent to "action" and is what one is choosing.</dd>
+          </dt>
+          <br>
+          <li>"radio" creates one-choice-only selection field (in this format,"label" normally comes after "input").
+          </li>
+          <dt>
+          <dd><mark>value</mark> defines the info written beside the checkbox and is what is sent to "action"</dd>
+          </dt>
+          <br>
+          <li>"submit" creates a submit button.</li>
+          <dt>
+          <dd><mark>value</mark> is the text inside of the button.</dd>
+          </dt>
+          <br>
+          <li>"range" creates a dragable line without very specific values.</li>
+          <dt>
+          <dd><mark>min</mark> is the minimum number, <mark>max</mark> is the maximum number in the range and
+            <mark>step</mark> defines the frequency in which the number grows.</dd>
+          </dt>
+          <br>
+          <li>"file" creates a button to insert a file.</li>
+          <br>
+          <li>"password" creates a password field.</li>
+          <br>
+          <li>"color" creates a color selector.</li>
+          <dt>
+          <dd><mark>value</mark> is the first color to appear.</dd>
+          </dt>
+          <br>
+          <li>"date" creates a space to add date.</li>
+          <dt>
+          <dd><mark>min</mark> for minimum date available and <mark>max</mark> for maximum date available.</dd>
+          </dt>
+          <br>
+          <li>"search" creates a search tab.</li>
+          <br>
+        </ol>
+        <br>
+        <a href="forms.html">Exemplos de Formulários e Inputs</a>
+      </div>
+    </section>
+    <hr>
+    <section id="cores">
+      <div>
+        <h3 id="colortypes">Colors</h3>
+        <h4>Types of codes for colors:</h4>
+        <ol>
+          <li><abbr title="Red Green Blue">RGB</abbr> - 255 shades for each</li>
+          <dt>
+          <dd>"rgb (255, 0, 0)" is red {255 is a full amount for red, while the rest are 0}</dd>
+          <dd>"rgb (0, 255, 0)" is green {255 is a full amount for green, while the rest are 0}</dd>
+          <dd>"rgb (0, 0, 255)" is blue {255 is a full amount for blue, while the rest are 0}</dd>
+          <dd>"rgb (0, 0, 0)" is black {all amounts are completely zeroed}</dd>
+          <dd>"rgb (255, 255, 255)" is white {all amounts are full}</dd>
+          <dd>"rgb (=, =, =)" is grey {an equal amount of all colors signify grey}</dd>
+          <dd>"rgba (45, 45, 45, 0.5)" is green {the A means alpha - the intensity of color (ranges from 0 to 1.0)}</dd>
+          </dt>
+          <br>
+          <br>
+          <li>HEX (#RRGGBB) - every 2 digits go all the way to 99, then group in letters and numbers, until 9, moving on
+            to letters and letters until f; also follows the same scheme of red, green, blue.</li>
+          <dt>
+          <dd>"#ff0000" is red {ff is a full amount for red, while the rest are 00}</dd>
+          <dd>"#00ff00" is green {ff is a full amount for green, while the rest are 0}</dd>
+          <dd>"#0000ff" is blue {ff is a full amount for blue, while the rest are 0}</dd>
+          <dd>"#000000" is black {all amounts are completely zeroed}</dd>
+          <dd>"#ffffff" is white {all amounts are full}</dd>
+          <dd>"ababab" is grey {an intercalated equal amount of all colors signify grey}</dd>
+          </dt>
+          <br>
+          <br>
+          <li><abbr title="Hue Saturation Lightness">HSL</abbr>/<abbr title="Hue Saturation Lightness Alpha">HSLA</abbr>
+            - <i>hue</i> = 0 - 360 --> 0 is red, 120 is green and 240 is blue; <i>sat</i> = 0% to 100% -- > 0% is gray
+            and 100% is full color; <i>light</i> = 0% to 100% --> 0% is white and 100% is black.</li>
+          <dt>
+          <dd>"hsl (0, 0%, 100%, 0.5)" is an example of the color code formatting.</dd>
+          </dt>
+          <br>
+          <br>
+          <li>COLOR NAMES as in <a href="https://www.w3schools.com/colors/colors_names.asp" target="_blank"><button>this
+                link</button></a>.</li>
+        </ol>
+      </div>
+    </section>
+  </main>
+
+  <br><br><br>
+
+  <footer>
+    <p style="font-size:smaller;"><em>Gabriela Ferreira's fieldnotes on Programming!</em>
+      <a href="#começo">
+        <img src="images/seta.png" alt="Seta para cima" width="20" style="float:right;">
+      </a>
+    </p>
+    <br>
+  </footer>
+</body>
+
+</html>
